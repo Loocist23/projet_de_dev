@@ -1,0 +1,18 @@
+{
+  "name": "quiz_bot",
+  "version": "1.0.0",
+  "description": "un bot discord oklm",
+  "main": "index.js",
+  "scripts": {
+    "test": "*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0"
+  },
+  "keywords": []
+}
