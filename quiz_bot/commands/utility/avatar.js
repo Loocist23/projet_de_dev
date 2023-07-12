@@ -1,14 +1,19 @@
-const { SlashCommandBuilder } = require('discord.js');
+//commande permettant de connaitre l'avatar d'un utilisateur
+
+const { SlashCommandBuilder} = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('avatar')
-		.setDescription('Get the avatar URL of the selected user, or your own avatar.')
-		.addUserOption(option => option.setName('target').setDescription('The user\'s avatar to show')),
+		.setDescription('Renvoie l\'avatar d\'un utilisateur')
+		.addUserOption(option =>
+			option.setName('utilisateur')
+				.setDescription('L\'utilisateur dont vous voulez l\'avatar')),
 	category: 'utility',
 	async execute(interaction) {
-		const user = interaction.options.getUser('target');
-		if (user) return interaction.reply(`${user.username}'s avatar: ${user.displayAvatarURL({ dynamic: true })}`);
-		return interaction.reply(`Your avatar: ${interaction.user.displayAvatarURL()}`);
-	},
+		const { options } = interaction;
+		const user = options.getUser('utilisateur') || interaction.user;
+
+		await interaction.reply(user.displayAvatarURL({ dynamic: true, size: 512 }));
+	}
 };
