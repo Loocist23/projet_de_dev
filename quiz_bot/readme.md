@@ -35,12 +35,17 @@ Quiz Bot est un bot Discord simple qui a été développé pour une utilisation 
 }
 ```
 
-2. Deployer le bot sur votre serveur discord test
+2. Deployer les commandes du bot sur votre serveur discord test
 
    ```bash
    node deploy-commands.js
 
-3. Lancer le bot
+3. Deployer les commandes du bot sur tout les serveurs discord
+
+   ```bash
+   node deploy-global.js
+
+4. Lancer le bot
 
    ```bash
     node index.js
