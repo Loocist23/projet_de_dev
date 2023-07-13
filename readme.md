@@ -11,4 +11,4 @@ Chaque projet a son propre dossier, avec un fichier `readme.md` qui explique com
 Si vous voulez contribuer, vous pouvez faire une pull request, ou m'envoyer un message sur discord (mon pseudo est `@Loocist`).
 
 ## License
-Ce projet est sous license MIT. Voir le fichier [license.md](license.ms) pour plus d'informations.
+Ce projet est sous license MIT. Voir le fichier [license.md](license.md) pour plus d'informations.
