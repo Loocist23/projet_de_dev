@@ -1,0 +1,15 @@
+{
+  "name": "rss_bot",
+  "version": "1.0.0",
+  "description": "un simple bot discord qui lit des flux rss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Loocist",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "rss-parser": "^3.13.0"
+  }
+}
