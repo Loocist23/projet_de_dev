@@ -1,6 +1,6 @@
 MIT License
 
-Droit d'auteur (c) [année] [Loocist]
+Droit d'auteur (c) [2023] [Loocist]
 
 Permission est accordée, gratuitement, à toute personne obtenant une copie de ce logiciel et des fichiers de documentation associés (le "Logiciel"), de traiter le Logiciel sans restriction, y compris, sans limitation, les droits d'utilisation, de copie, de modification, de fusion, de publication, de distribution, de sous-licence et/ou de vente du Logiciel, et d'autoriser les personnes à qui le Logiciel est fourni à le faire, sous réserve des conditions suivantes :
 
