@@ -54,6 +54,11 @@ module.exports = {
     const rightAnswer = options.getInteger('right_answer');
     const points = options.getInteger('points');
 
+    if (![1, 2, 3].includes(rightAnswer)) {
+      await interaction.reply('La valeur de la bonne réponse est invalide. Veuillez choisir parmi 1, 2 ou 3.', { ephemeral: true });
+      return;
+    }
+
     const correctAnswerEmojis = ['1️⃣', '2️⃣', '3️⃣'];
     const correctAnswerEmoji = correctAnswerEmojis[rightAnswer - 1];
     const correctAnswer = [answer, answer2, answer3][rightAnswer - 1];
