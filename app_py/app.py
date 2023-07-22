@@ -11,7 +11,7 @@ def generate_password(size):
         numbers = random.choice(string.digits)
         password.append(random.choice([alpha, symbol, numbers]))
     y = "".join(str(x) for x in password)
-    passwordlabel.config(text="Password: " + y)
+    passwordlabel.config(text=y)
     
 def check():
     try:
@@ -26,6 +26,10 @@ def check():
     else:
         generate_password(value)
 
+def copypassword():
+    root.clipboard_clear()
+    root.clipboard_append(passwordlabel.cget("text"))
+
 # Create the window
 
 root = Tk()
@@ -34,11 +38,13 @@ root.title("App Python")
 # Label
 label = ttk.Label(root, text="Generate a password")
 sizelabel = ttk.Label(root, text="Size, min: 8, max: 128")
-passwordlabel = ttk.Label(root, text="Password: ")
+passlabel = ttk.Label(root, text="Password: ")
+passwordlabel = ttk.Label(root, text="")
 
 # Button
 
 GenButton = ttk.Button(root, text="Click Me", command=check)
+CopieButton = ttk.Button(root, text="Copie abc", command=copypassword)
 
 # Entry
 
@@ -50,6 +56,8 @@ label.pack()
 sizelabel.pack()
 GenButton.pack()
 NumEntry.pack()
+passlabel.pack()
 passwordlabel.pack()
+CopieButton.pack()
 
 root.mainloop()
