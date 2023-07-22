@@ -35,29 +35,29 @@ def copypassword():
 root = Tk()
 root.title("App Python")
 
+
+
 # Label
 label = ttk.Label(root, text="Generate a password")
-sizelabel = ttk.Label(root, text="Size, min: 8, max: 128")
+label.grid(row=0, column=0)
+sizelabel = ttk.Label(root, text="Size min: 8, max: 128")
+sizelabel.grid(row=1, column=0)
 passlabel = ttk.Label(root, text="Password: ")
+passlabel.grid(row=3, column=0)
 passwordlabel = ttk.Label(root, text="")
-
+passwordlabel.grid(row=3, column=1)
 # Button
 
-GenButton = ttk.Button(root, text="Click Me", command=check)
-CopieButton = ttk.Button(root, text="Copie abc", command=copypassword)
-
+GenButton = ttk.Button(root, text="Generate", command=check)
+GenButton.grid(row=2, column=1)
+CopieButton = ttk.Button(root, text="Copy password", command=copypassword)
+CopieButton.grid(row=3, column=2, sticky="W")
 # Entry
 
 NumEntry = ttk.Entry(root)
+NumEntry.grid(row=2, column=0)
 
 #now we create the app
 
-label.pack()
-sizelabel.pack()
-GenButton.pack()
-NumEntry.pack()
-passlabel.pack()
-passwordlabel.pack()
-CopieButton.pack()
 
 root.mainloop()
