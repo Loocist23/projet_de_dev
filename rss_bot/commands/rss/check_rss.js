@@ -23,7 +23,7 @@ module.exports = {
         const items = feed.items.slice(0, 25); // Limite à 25 éléments
 
         items.forEach(item => {
-            embed.addFields({ name: item.title, value: item.link });
+            embed.addFields({ name: item.title, value: item.link + "\n" + item.pubDate });
         });
 
         await interaction.reply({ embeds: [embed] });
