@@ -24,7 +24,7 @@ def check():
     elif value > 128:
         passwordlabel.config(text="Password too long")
     else:
-        generate_password(int(NumEntry.get()))
+        generate_password(value)
 
 # Create the window
 
