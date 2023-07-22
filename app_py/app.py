@@ -12,7 +12,7 @@ root = Tk()
 root.title("App Python")
 
 # Label
-label = ttk.Label(root, text="Hello World")
+label = ttk.Label(root, text="Generate a password")
 
 # Button
 
