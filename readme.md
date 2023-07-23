@@ -4,6 +4,7 @@ Ceci est un dossier ou je mettrai mes projets de programmation.
 - [x] [Un bot pour faire des quiz sur discord](quiz_bot)
 - [x] [Un bot discord qui lit des flux rss](rss_bot)
 - [x] [Une application pour generer des mots de passe](password_generator)
+- [x] [une application qui scanne le reseaux local](network_scanner)
 
 ## Comment utiliser les projets
 Chaque projet a son propre dossier, avec un fichier `readme.md` qui explique comment l'utiliser.
