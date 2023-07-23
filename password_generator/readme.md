@@ -9,7 +9,8 @@ simple app pour generer des mots de passe aleatoires
 Si vous voulez contribuer, vous pouvez faire une pull request, ou m'envoyer un message sur discord (mon pseudo est `@Loocist`).
 
 # possible amelioration:
-Je vais essayer de faire une vrai application (exe).
+Je vais essayer de faire une vrai application (exe). (Fait)
+
 
 
 # License:
