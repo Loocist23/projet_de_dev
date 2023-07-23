@@ -7,7 +7,7 @@ def generate_password(size):
     password = []
     for i in range(size):
         alpha = random.choice(string.ascii_letters)
-        symbol = random.choice(string.punctuation)
+        symbol = random.choice("!@#$%^&*")
         numbers = random.choice(string.digits)
         password.append(random.choice([alpha, symbol, numbers]))
     y = "".join(str(x) for x in password)
