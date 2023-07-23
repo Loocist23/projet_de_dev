@@ -1,0 +1,12 @@
+
+Interfaceÿ: 192.168.0.28 --- 0x8
+  Adresse Internet      Adresse physique      Type
+  192.168.0.18          c8-0a-a9-c2-11-0c     dynamique 
+  192.168.0.254         f4-ca-e5-57-5a-ee     dynamique 
+  192.168.0.255         ff-ff-ff-ff-ff-ff     statique  
+  224.0.0.22            01-00-5e-00-00-16     statique  
+  224.0.0.251           01-00-5e-00-00-fb     statique  
+  224.0.0.252           01-00-5e-00-00-fc     statique  
+  239.192.152.143       01-00-5e-40-98-8f     statique  
+  239.255.255.250       01-00-5e-7f-ff-fa     statique  
+  255.255.255.255       ff-ff-ff-ff-ff-ff     statique  
