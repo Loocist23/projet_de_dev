@@ -2,7 +2,7 @@
 simple app pour generer des mots de passe aleatoires
 
 # Comment utiliser:
-- Ouvrir le fichier `password_generator.py` avec python
+- Ouvrir le fichier `password_generator.py` avec python ou l'executable `password_generator.exe`
 - Suivre les instructions
 
 # Comment contribuer:
