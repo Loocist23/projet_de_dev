@@ -33,7 +33,7 @@ def copypassword():
 # Create the window
 
 root = Tk()
-root.title("App Python")
+root.title("PassGen")
 
 
 

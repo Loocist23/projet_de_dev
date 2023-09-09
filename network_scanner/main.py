@@ -1,6 +1,6 @@
 import subprocess
 from tkinter import *
-import speedtest
+
 
 def is_valid_ip(ip):
     try:
@@ -78,10 +78,5 @@ scan_button.pack()
 result_text = Text(root, wrap=WORD, width=50, height=15, state=DISABLED)
 result_text.pack()
 
-speedtest_button = Button(root, text="Tester la vitesse de la connexion", command=lambda: speedtest.Speedtest().download())
-speedtest_button.pack()
-
-speedtest_result = Text(root, wrap=WORD, width=50, height=15, state=DISABLED)
-speedtest_result.pack()
 
 root.mainloop()

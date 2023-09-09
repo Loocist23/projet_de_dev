@@ -1,0 +1,48 @@
+const { Client, GatewayIntentBits } = require('discord.js');
+
+const client = new Client({
+	intents: [
+		GatewayIntentBits.Guilds,
+		GatewayIntentBits.GuildMessages,
+		GatewayIntentBits.MessageContent,
+		GatewayIntentBits.GuildMembers,
+	],
+});
+const fs = require('fs');
+const path = require('path');
+
+const TOKEN = 'MTE1MDA1NDE3MTAzMTExMzc0OA.G3Smit.n0EUlcjuTKrnIFZKDD57QOoCMlF5tclvQ2hXcw';
+const CHANNEL_ID = '1150055456635621396'; // ID du channel où vous voulez poster les images
+const SOURCE_FOLDER = 'C:/Users/moi/Pictures/generated/';
+const DESTINATION_FOLDER = 'C:/Users/moi/Pictures/usedgenerated';
+
+
+client.once('ready', () => {
+    console.log('Bot est connecté !');
+    setInterval(sendImages, 5000); // Chaque minute par exemple. Changez le nombre pour ajuster l'intervalle.
+});
+
+async function sendImages() {
+    const channel = await client.channels.fetch(CHANNEL_ID);
+    
+    fs.readdir(SOURCE_FOLDER, (err, files) => {
+        if (err) throw err;
+
+        for (const file of files) {
+            if (file.endsWith('.png') || file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.gif')) {
+                const file_path = path.join(SOURCE_FOLDER, file);
+                const destination_path = path.join(DESTINATION_FOLDER, file);
+
+                channel.send({
+                    files: [file_path]
+                }).then(() => {
+                    fs.rename(file_path, destination_path, err => {
+                        if (err) throw err;
+                    });
+                }).catch(console.error);
+            }
+        }
+    });
+}
+
+client.login(TOKEN);
