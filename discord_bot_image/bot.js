@@ -35,6 +35,7 @@ async function sendImages() {
                 channel.send({
                     files: [file_path]
                 }).then(() => {
+                    console.log(`Image envoyée : ${file}`);
                     fs.rename(file_path, destination_path, err => {
                         if (err) throw err;
                     });
