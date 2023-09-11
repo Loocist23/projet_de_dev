@@ -11,10 +11,9 @@ const client = new Client({
 const fs = require('fs');
 const path = require('path');
 
-const TOKEN = 'MTE1MDA1NDE3MTAzMTExMzc0OA.G3Smit.n0EUlcjuTKrnIFZKDD57QOoCMlF5tclvQ2hXcw';
-const CHANNEL_ID = '1150055456635621396'; // ID du channel où vous voulez poster les images
-const SOURCE_FOLDER = 'C:/Users/moi/Pictures/generated/';
-const DESTINATION_FOLDER = 'C:/Users/moi/Pictures/usedgenerated';
+// le token est dans le config.json ainsi que le channel id, le source folder et le destination folder
+const { TOKEN, CHANNEL_ID, SOURCE_FOLDER, DESTINATION_FOLDER } = require('./config.json');
+
 
 
 client.once('ready', () => {
