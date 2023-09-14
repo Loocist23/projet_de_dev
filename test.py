@@ -1,7 +1,7 @@
-i = 0
+import os
+import shutil
 
-while i < 12:
-    print('oui')
-    i = i + 1
-    
-print("non")
+oui ="C:/Users/moi/Desktop/projet_de_dev/oui.txt"
+dossier = "C:/Users/moi/Desktop/projet_de_dev/oui/"
+
+os.replace(oui, dossier)

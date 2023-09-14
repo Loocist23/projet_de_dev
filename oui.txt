@@ -1,0 +1,3 @@
+ce code doit prendre le fichier oui.txt et le mettre dans le dossier oui
+
+
