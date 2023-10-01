@@ -12,7 +12,7 @@ def check_url(url, base_url):
     else:
         return base_url + url
 
-def scrap(url, depth=0, visited=None):
+def scrap(url, depth=0, visited=None, type_search="a"):
     if visited is None:
         visited = set()
 
@@ -38,7 +38,7 @@ def scrap(url, depth=0, visited=None):
         return
 
     soup = BeautifulSoup(r.text, "html.parser")
-    links = soup.find_all("a")
+    links = soup.find_all(type_search)
 
     links_dict = {}
 
@@ -56,4 +56,8 @@ def scrap(url, depth=0, visited=None):
         print(f"Fichier links_depth_{depth}.json créé")
 
 url = input("Entrez l'URL à crawler : ")
-scrap(url)
+print("Quelle type de balise voulez-vous crawler ?")
+print("1 - a (lien)")
+print("2 - img (image)")
+type_search = input("Votre choix : ")
+scrap(url, type_search=type_search)
