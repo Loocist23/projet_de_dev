@@ -42,4 +42,4 @@ async function sendImages() {
     });
 }
 
-client.login("MTA5MjUwMTQ3NjU1MjczNjg2OQ.GTz8P8.DR4GM0cA14Yo-ueZmssaArnC4cvRGzxE7iK5YY");
+client.login("your token");
