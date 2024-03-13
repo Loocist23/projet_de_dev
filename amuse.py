@@ -12,7 +12,7 @@ def generate_random_id():
 # Fonction pour afficher le texte en rouge, sauf si le solde est positif
 def print_red_unless_positive(text, solde):
     if solde > 0:
-        print(Fore.GREEN + text)
+        print(Fore.GREEN + Fore.GREEN + text)
     else:
         print(Fore.RED + text)
 
@@ -29,22 +29,41 @@ def generate_soldes():
     # Si la probabilité n'est pas satisfaite, génère un solde positif aléatoire
     return str(random.randint(1, 1e4))
 
+def clear_output():
+    print("\033[H\033[J", end="")
+
+
+def clear_output():
+    print("\033[H\033[J", end="")
+
+
 def prod():
+    clear_output()
+    random_soldes = generate_soldes()
     random_soldes = generate_soldes()
     random_id = generate_random_id()
-    print_red_unless_positive("Identifiant : " + random_id, float(random_soldes))
+    print_red_unless_positive("Faux Identifiant : " + random_id, float(random_soldes))
 
     # Génère un numéro de carte et l'affiche en rouge
     random_card_number = generate_card_number()
-    print_red_unless_positive("Numéro de carte : " + random_card_number, float(random_soldes))
+    # ecrit le faux numero de carte au format 0000 0000 0000 0000
+    random_card_number = random_card_number[0:4] + " " + random_card_number[4:8] + " " + random_card_number[8:12] + " " + random_card_number[12:16]
+    print_red_unless_positive("Faux Numéro de carte : " + random_card_number, float(random_soldes))
 
     # Génère un code PIN et l'affiche en rouge
     random_card_pin = generate_card_pin()
-    print_red_unless_positive("Code PIN : " + random_card_pin, float(random_soldes))
+    print_red_unless_positive("Faux Code PIN : " + random_card_pin, float(random_soldes))
 
     # Génère un solde et l'affiche en rouge, sauf s'il est égal à zéro
     
-    print_red_unless_positive("Solde : " + random_soldes, float(random_soldes))
+    print_red_unless_positive("Faux Solde : " + random_soldes, float(random_soldes))
+    
+    print(Fore.CYAN + "TOUT CECI EST FAUX !")
+    print(Fore.CYAN + "TOUT CECI EST FAUX !")
+    print(Fore.CYAN + "TOUT CECI EST FAUX !")
+    print(Fore.CYAN + "TOUT CECI EST FAUX !")
+    print(Fore.CYAN + "TOUT CECI EST FAUX !")
+
 
 
 while True:

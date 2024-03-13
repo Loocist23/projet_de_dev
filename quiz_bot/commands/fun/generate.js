@@ -2,10 +2,6 @@ const { SlashCommandBuilder} = require('discord.js');
 const Discord = require('discord.js');
 const { createCanvas, registerFont } = require('canvas');
 
-
-
-
-
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('generate')
