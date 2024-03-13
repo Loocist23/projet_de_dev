@@ -12,7 +12,7 @@ def generate_random_id():
 # Fonction pour afficher le texte en rouge, sauf si le solde est positif
 def print_red_unless_positive(text, solde):
     if solde > 0:
-        print(Fore.GREEN + Fore.GREEN + text)
+        print(Fore.GREEN + text)
     else:
         print(Fore.RED + text)
 
