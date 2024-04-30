@@ -24,10 +24,14 @@ def generate_card_pin():
 
 def generate_soldes():
     # Génère un solde égal à zéro avec une probabilité de 99.99999%
-    if random.random() < 0.9999999:
+    if random.random() < 0.9999:
         return "0"
     # Si la probabilité n'est pas satisfaite, génère un solde positif aléatoire
-    return str(random.randint(1, 1e9))
+    return str(random.randint(1, 1e4))
+
+def clear_output():
+    print("\033[H\033[J", end="")
+
 
 def clear_output():
     print("\033[H\033[J", end="")
@@ -35,6 +39,7 @@ def clear_output():
 
 def prod():
     clear_output()
+    random_soldes = generate_soldes()
     random_soldes = generate_soldes()
     random_id = generate_random_id()
     print_red_unless_positive("Faux Identifiant : " + random_id, float(random_soldes))
