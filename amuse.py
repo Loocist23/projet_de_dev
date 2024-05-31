@@ -24,7 +24,7 @@ def generate_card_pin():
 
 def generate_soldes():
     # Génère un solde égal à zéro avec une probabilité de 99.99999%
-    if random.random() < 0.9999:
+    if random.random() < 0.9:
         return "0"
     # Si la probabilité n'est pas satisfaite, génère un solde positif aléatoire
     return str(random.randint(1, 1e4))
@@ -56,7 +56,7 @@ def prod():
 
     # Génère un solde et l'affiche en rouge, sauf s'il est égal à zéro
     
-    print_red_unless_positive("Faux Solde : " + random_soldes, float(random_soldes))
+    print_red_unless_positive("Faux Solde : " + random_soldes + " €", float(random_soldes))
     
     print(Fore.CYAN + "TOUT CECI EST FAUX !")
     print(Fore.CYAN + "TOUT CECI EST FAUX !")
